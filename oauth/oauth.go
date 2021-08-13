@@ -97,7 +97,7 @@ func cleanRequest(request *http.Request) {
 }
 
 func getAccessToken(accessTokenId string) (*accessToken, *errors.RestErr) {
-	response := oauthRestClient.Get(fmt.Sprintf("/oauth/acess_token/%s", accessTokenId))
+	response := oauthRestClient.Get(fmt.Sprintf("/oauth/access_token/%s", accessTokenId))
 	if response == nil || response.Response == nil {
 		return nil, errors.NewInternalServerError("invalid restclient response when trying to get access token")
 	}
