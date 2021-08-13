@@ -12,8 +12,8 @@ import (
 )
 
 const (
-	headerXPublic = "X-Public"
-	headerXClientId ="X-Client-Id"
+	headerXPublic   = "X-Public"
+	headerXClientId = "X-Client-Id"
 	headerXCallerId = "X-Caller-Id"
 
 	paramAccessToken = "access_token"
@@ -27,12 +27,12 @@ var (
 )
 
 type accessToken struct {
-	Id string `json:"id"`
-	UserId int64 `json:"user_id"`
-	ClientId int64 `json:"client_id"`
+	Id       string `json:"id"`
+	UserId   int64  `json:"user_id"`
+	ClientId int64  `json:"client_id"`
 }
 
-func IsPublic(request *http.Request)  bool {
+func IsPublic(request *http.Request) bool {
 	if request == nil {
 		return true
 	}
